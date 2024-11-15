@@ -37,9 +37,7 @@ class Controller {
     const inputCols = form.mazeCols.value;
 
     this.route = new Stack();
-    const randMaze = new MazeGenerator(inputRows, inputCols);
-    randMaze.generate();
-    this.board = randMaze.getBoard();
+    this.generateMaze(inputRows, inputCols);
     this.displayBoard();
   }
 
@@ -47,6 +45,12 @@ class Controller {
     event.preventDefault();
     this.solver();
     this.displayBoard();
+  }
+
+  generateMaze(rows, cols) {
+    const randMaze = new MazeGenerator(rows, cols);
+    randMaze.generate();
+    this.board = randMaze.getBoard();
   }
 
   solver() {
