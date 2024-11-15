@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Labyrint Generator</title>
+  </head>
+  <body>
+    <h1>Labyrint Generator</h1>
+    <form id="mazeSizeForm">
+      <div id="rowsInput">
+        <label for="mazeRows">Maze Rows:</label>
+        <input type="number" name="mazeRows" id="mazeRows" />
+      </div>
+      <div id="colsInput">
+        <label for="mazeColumns">Maze Columns:</label>
+        <input type="number" name="mazeCols" id="mazeColumns" />
+      </div>
+      <button id="generateBtn">Generate Maze</button>
+    </form>
+    <div id="game"></div>
+    <button id="solveBtn">Solve</button>
+
+    <h3>
+      Maze as json: <br />
+      <br />
+      <span id="mazeJson"></span>
+    </h3>
+
+    <script type="module" src="controller.js"></script>
+  </body>
+</html>
