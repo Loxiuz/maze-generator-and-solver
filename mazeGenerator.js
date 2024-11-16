@@ -67,7 +67,7 @@ export default class MazeGenerator {
       };
 
       const neighboursInMaze = this.neighboursInMaze(coords);
-      console.log(`Neighbours in cell:`, neighboursInMaze);
+      // console.log(`Neighbours in cell:`, neighboursInMaze);
 
       if (neighboursInMaze.length > 0) {
         const randomNeighbour =
