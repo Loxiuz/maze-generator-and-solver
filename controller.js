@@ -37,6 +37,7 @@ class Controller {
     const inputCols = form.mazeCols.value;
 
     this.route = new Stack();
+    this.setStatusMsg("");
     this.generateMaze(inputRows, inputCols);
     this.displayBoard();
   }
@@ -61,8 +62,16 @@ class Controller {
       const route = solver.solve();
       if (route) {
         this.route = route;
+        this.setStatusMsg("Solved!");
+      } else {
+        console.log("No route found.");
+        this.setStatusMsg("Solution not possible.");
       }
     }
+  }
+
+  setStatusMsg(msg) {
+    document.querySelector("#statusMsg").textContent = msg;
   }
 
   displayBoard() {

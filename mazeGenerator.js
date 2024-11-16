@@ -77,7 +77,7 @@ export default class MazeGenerator {
 
       const cell = this.#board.maze.get(coords);
       if (cell && !cell.inMaze) {
-        console.log("cell:", cell);
+        // console.log("cell:", cell);
         cell.inMaze = true;
         this.#board.maze.set(coords, cell);
 
